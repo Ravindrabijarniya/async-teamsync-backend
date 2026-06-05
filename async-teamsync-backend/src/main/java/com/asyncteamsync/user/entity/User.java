@@ -1,5 +1,6 @@
 package com.asyncteamsync.user.entity;
 
+import com.asyncteamsync.auth.entity.RefreshToken;
 import com.asyncteamsync.common.BaseEntity;
 import com.asyncteamsync.team.entity.TeamMember;
 import jakarta.persistence.*;
@@ -42,5 +43,12 @@ public class User extends BaseEntity {
             orphanRemoval = true
     )
     private List<TeamMember> teams = new ArrayList<>();
+
+    @OneToMany(
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<RefreshToken> refreshTokens = new ArrayList<>();
 
 }

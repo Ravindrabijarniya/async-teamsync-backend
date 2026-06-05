@@ -17,6 +17,11 @@
         hibernate:
           formate_sql: true
 
+  jwt:
+    secret: mySuperSecretKeyForAsyncTeamSyncApplication2026VerySecureKey
+    access-token-expiration: 900000
+    refresh-token-expiration: 604800000
+
   server:
     port: 8080
 
