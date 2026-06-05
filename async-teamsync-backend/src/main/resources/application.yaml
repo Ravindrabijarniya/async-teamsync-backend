@@ -1,0 +1,22 @@
+  spring:
+    application:
+      name: async-teamsync-backend
+
+    datasource:
+      url: jdbc:postgresql://localhost:5432/async_teamsync
+      username: postgres
+      password: admin
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+
+      show-sql: true
+
+      properties:
+        hibernate:
+          formate_sql: true
+
+  server:
+    port: 8080
+
